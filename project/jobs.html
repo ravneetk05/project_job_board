@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>browse jobs</title>
+<link rel="stylesheet" href="job board.css">
+</head>
+<body>
+    <header>
+        <header>
+            <div class="logo">
+                <img src="https://zenprospect-production.s3.amazonaws.com/uploads/pictures/62f7cceb67239f00013f08e4/picture" width="100px" height="90px" >
+            </div><h1 > BROWSE JOBS </h1>
+            <nav style="position: relative;"  >
+                <ul>
+                    <li><a href="mainpage.html">Home</a></li>
+                    <li><a href="browsejobs.html">Browse Jobs</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sign.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </header></header>
+
+<div class ="filter" >
+    
+<select id="locationFilter">
+    <option value="all">All Locations</option>
+    <option value="banglore">BANGLORE, IN</option>
+    <option value="chennai">Chennai, IN</option>
+    <option value="ambala">Ambala haryana</option>
+    <option value="gurugram">gurugram, haryana</option>
+    <option value="hyderabad">Hyderabad, Telangana</option>
+
+    
+</select>
+<select id="jobTypeFilter">
+    <option value="all">All Job Types</option>
+    <option value="full-time">Full-Time</option>
+    <option value="part-time">Part-Time</option>
+    <option value="contract">Contract</option>
+    
+</select>
+<select id="industryFilter">
+    <option value="all">All Industries</option>
+    <option value="technology">Technology</option>
+    <option value="finance">Finance</option>
+    <option value="healthcare">Healthcare</option>
+
+</select>
+
+<select id="experienceFilter">
+    <option value="all">All Experience Levels</option>
+    <option value="entry-level">Entry Level</option>
+    <option value="mid-level">Mid Level</option>
+    <option value="senior-level">Senior Level</option>
+   
+</select>
+</div>
+<!-- Job listings -->
+<section class="job-listings">
+        <div class="job-listing" data-location="banglore" data-job-type="full-time" data-industry="technology" data-experience="entry-level">
+            <h3>Software Developer</h3>
+            <p class="company">GOOGLE Tech </p>
+            <p class="location">BANGLORE, IN</p>
+            <p class="deadline">Application Deadline: MARCH 30, 2024</p>
+            <a href="https://careers.google.com/" target="blank">APPLY HERE</a>
+        </div>
+     
+        <div class="job-listing" data-location="banglore" data-job-type="part-time" data-industry="technology" data-experience="mid-level">
+            <h3>HR Manager</h3>
+            <p class="company">Infosys </p>
+            <p class="location">BANGLORE, IN</p>
+            <p class="deadline">Application Deadline: MARCH 24, 2024</p>
+            <a href="https://www.infosys.com/careers/apply.html" target="blank">APPLY HERE</a>
+        </div>
+        
+        <div class="job-listing" data-location="banglore" data-job-type="full-time" data-industry="technology" data-experience="senior-level">
+          
+            <h3>Graphic designer</h3>
+            <p class="company">Microsoft Tech </p>
+            <p class="location">BANGLORE, IN</p>
+            <p class="deadline">Application Deadline: APRIL 8, 2024</p>
+            <a href="https://careers.microsoft.com/" target="blank">APPLY HERE</a>
+        </div>
+        
+        <div class="job-listing" data-location="chennai" data-job-type="part-time" data-industry="technology" data-experience="entry-level">
+             
+                <h3>Technical manager</h3>
+                <p class="company">Adobe </p>
+                <p class="location">Chennai, IN</p>
+                <p class="deadline">Application Deadline:APRIL 5, 2024</p>
+                <a href="https://www.adobe.com/careers.html" target="blank">APPLY HERE</a>
+        </div> 
+        <div class="job-listing" data-location="ambala" data-job-type="part-" data-industry="technology" data-experience="mid-level">
+            <h3>Google Ads Expert</h3>
+                <p class="company">google </p>
+                <p class="location">Ambala haryana</p>
+                <p class="deadline">Application Deadline:MARCH 30, 2024</p>
+                <a href="https://careers.google.com/" target="blank">APPLY HERE</a>
+        </div>
+        <div class="job-listing" data-location="gurugram" data-job-type="part-time" data-industry="technology" data-experience="senior-level">
+                   <h3>Senior Software Engineer, Machine Learning, Google Cloud</h3>
+                    <p class="company">google </p>
+                    <p class="location">gurugram, haryana</p>
+                    <p class="deadline">Application Deadline:APRIL 15, 2024</p>
+                    <a href="https://careers.google.com/" target="blank">APPLY HERE</a>
+        </div>
+        <div class="job-listing" data-location="hyderabad" data-job-type="full-time" data-industry="technology" data-experience="entry-level">
+               <h3>Advocacy Operations Associate, Advocacy Operations</h3>
+                <p class="company">Amazon </p>
+                <p class="location">Hyderabad, Telangana</p>
+                <p class="deadline">Application Deadline:APRIL 10, 2024</p>
+                <a href="https://www.amazon.jobs/en/landing_pages/online-application"target="blank">APPLY HERE</a>
+        </div>
+        <div class="job-listing" data-location="hyderabad" data-job-type="part-time" data-industry="technology" data-experience="senior-level">
+                <h3>SAP RAR Functional Analyst</h3>
+                <p class="company">Apple </p>
+                <p class="location">Hyderabad, Telangana</p>
+                <p class="deadline">Application Deadline:MARCH 30, 2024</p>
+                <a href="https://www.apple.com/careers/in/" target="blank">APPLY HERE</a></div>
+      
+</section>
+<script>
+    document.getElementById('locationFilter').addEventListener('change', filterJobs);
+    document.getElementById('jobTypeFilter').addEventListener('change', filterJobs);
+    document.getElementById('industryFilter').addEventListener('change', filterJobs);
+    document.getElementById('experienceFilter').addEventListener('change', filterJobs);
+    
+    function filterJobs() {
+        const locationFilter = document.getElementById('locationFilter').value;
+        const jobTypeFilter = document.getElementById('jobTypeFilter').value;
+        const industryFilter = document.getElementById('industryFilter').value;
+        const experienceFilter = document.getElementById('experienceFilter').value;
+    
+        const jobListings = document.querySelectorAll('.job-listing');
+    
+        jobListings.forEach(function(jobListing) {
+            const location = jobListing.getAttribute('data-location');
+            const jobType = jobListing.getAttribute('data-job-type');
+            const industry = jobListing.getAttribute('data-industry');
+            const experience = jobListing.getAttribute('data-experience');
+    
+            const locationMatch = (locationFilter === 'all' || location === locationFilter);
+            const jobTypeMatch = (jobTypeFilter === 'all' || jobType === jobTypeFilter);
+            const industryMatch = (industryFilter === 'all' || industry === industryFilter);
+            const experienceMatch = (experienceFilter === 'all' || experience === experienceFilter);
+    
+            if (locationMatch && jobTypeMatch && industryMatch && experienceMatch) {
+                jobListing.style.display = 'block';
+            } else {
+                jobListing.style.display = 'none';
+            }
+        });
+    }
+</script>
+</body>
+<footer>
+    <div class="contact-info">
+        <h3>Contact Information</h3>
+       <p> Email: rhythm1189.be23@chitkara.edu.in ; ravneet1188.be23@chitkara.edu.in ; ranjeet1187.be23@chitkara.edu.in
+       </li></p>
+        <p>Phone: +91 7324929302</p>
+        <p>Address: Chitkara University , Rajpura, India</p>
+    </div>
+    <div class="footer-links">
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Sitemap</a></li>
+        </ul>
+    </div>
+    <div class="social-media">
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="#" class="fab fa-facebook"></a></li>
+            <li><a href="#" class="fab fa-twitter"></a></li>
+            <li><a href="#" class="fab fa-linkedin"></a></li>
+        </ul>
+    </div>
+    <p>&copy; 2023 Job Board platform</p>
+</footer> 
+</html>
